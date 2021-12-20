@@ -1,0 +1,61 @@
+# EC Standard Login Environment -*- sh -*-
+# user .aliases file
+# $Source: /usr/cvs/cvsrep/ec_environ-1.0/release/user/aliases,v $
+# $Revision: 1.1 $
+
+# You may place your personal aliases here or in .cshrc.$USER
+#
+
+# Shell alias
+# PS1="[\u@\h \w]$ " # BASH-SHELL only
+set     red="%{\033[1;31m%}"
+set   green="%{\033[0;32m%}"
+set  yellow="%{\033[1;33m%}"
+set    blue="%{\033[1;34m%}"
+set magenta="%{\033[1;35m%}"
+set    cyan="%{\033[1;36m%}"
+set   white="%{\033[0;37m%}"
+set     end="%{\033[0m%}"
+
+set prompt = '[%n@%m %~]$ '
+alias gvim "/usr/bin/X11/gvim -p"
+alias gvimdiff "/usr/bin/X11/gvimdiff" 
+alias c "clear"
+alias cls "clear;ls"
+alias b "cd ../../../../../../"
+alias ll "ls -l"
+
+#Path Aliases
+setenv DACHARIY_HOME "/nfs/sc/disks/gdr_ssdv_4/users/achariy"
+setenv DA_P4_AREA "$PWD/p4/avatar/gdr"
+setenv DA_ICM_AREA "$PWD/icm/client_0.local/"
+setenv DARUNDIR "$PWD/p4/avatar/gdr/gdrtop/rundir"
+setenv DACHARIY_HOME "/nfs/sc/disks/gdr_ssdv_4/users/achariy"
+setenv CRETE3TB_DIR "/nfs/site/disks/fm6_multidiecr3dv_2/users/hyunyi/fm_cr3_ss/REL_cr3revB_19ww291a/p4/avatar"
+
+alias go2work "cd $DACHARIY_HOME"
+alias cdp4 "cd $DA_P4_AREA"
+alias cdgdr "cd $DA_P4_AREA/gdrtop"
+alias cdbdir "cd $DA_P4_AREA/gdrtop/base_dir"
+alias cde400 "cd $DA_P4_AREA/e400g"
+alias cdehip "cd $DA_P4_AREA/e4hip"
+alias cdreg "cd $DA_P4_AREA/gdrtop/uvc/register"
+alias cdicm "cd $DA_ICM_AREA"
+
+alias xdl "xrandr -s 4"
+alias xds "xrandr -s 6"
+
+alias gvim_scrap "/usr/bin/X11/gvim -p $DACHARIY_HOME/scrap.txt"
+ 
+#Perforce Alias
+alias p4d "p4 diff -se ..."
+alias p4s "p4 sync ..."
+alias p4r "p4 resolve ..."
+alias p4o "p4 opened"
+ 
+alias rdve 'arc submit --I lsfq=lxverdi "node[memory>=64000]" -- dve -full64'
+alias rverdi 'arc submit --I lsfq=lxverdi "node[memory>=64000]" -- verdi -nologo -ssf'
+
+
+alias gts "gvim -p /ipd/dhw/project/crete3/lib/eth_svt_testsuite/L-2016.06/design_dir/src/verilog/vcs/"
+alias glts "gvim -p  $DACHARIY_HOME/testsuite/L-2016.06/design_dir/src/verilog/vcs"
