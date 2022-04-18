@@ -1,7 +1,7 @@
 set guifont=Monospace\ 13
 set tabpagemax=40
-set nu                                                                                                       
-set ul=1000                                                                                                  
+set nu
+set ul=1000
 syntax on
 set backspace=indent,eol,start
 set autoindent
@@ -46,20 +46,7 @@ map <F6> :%s/\s\+$//e<ENTER>
 map <F7>  :tab split<ENTER>:E<ENTER>
 imap <F7>  <esc> :tab split<ENTER>:E<ENTER>
 
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
-
-inoremap (      ()<Left>
-inoremap (<CR>  (<CR>}<Esc>O
-inoremap ()     (
-inoremap ()     ()
-
-inoremap "      ""<Left>
-inoremap ""     ""
-
-source /nfs/site/home/achariy/.vim/macros/matchit.vim
+source ~/.vim/macros/matchit.vim
 
 "---------------------------------------------------------------
 ab $d $display("");<esc>hhha
